@@ -1,0 +1,25 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "url": "",
+    "database": "",
+    "password": "",
+    "name": "mongo",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "amazon",
+    "keyId": "AKIAJK7FS4P64HT3Y4VQ",
+    "key": "",
+    "acl": "public-read",
+    "bucket": "langchao-static"
+  }
+}

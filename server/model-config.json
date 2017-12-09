@@ -1,0 +1,100 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mongo",
+    "public": false,
+    "options": {
+      "emailVerificationRequired": true
+    }
+  },
+  "AccessToken": {
+    "dataSource": "mongo",
+    "public": false,
+    "relations": {
+      "client": {
+        "type": "belongsTo",
+        "model": "client",
+        "foreignKey": "clientId"
+      }
+    }
+  },
+  "ACL": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongo",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "news": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "event": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "headerImage": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "subscription": {
+    "dataSource": "mongo",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "unsubscribe": true
+        }
+      }
+    }
+  },
+  "client": {
+    "dataSource": "mongo",
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
+  },
+  "notification": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "upload": {
+    "dataSource": "storage",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "uploadFile": true
+        }
+      }
+    }
+  },
+  "auth": {
+    "dataSource": "mongo",
+    "public": true
+  }
+}

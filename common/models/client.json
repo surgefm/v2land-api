@@ -1,0 +1,37 @@
+{
+  "name": "client",
+  "base": "User",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "events": {
+      "type": "hasMany",
+      "model": "event",
+      "foreignKey": "subscriberId",
+      "through": "subscription"
+    },
+    "subscriptions": {
+      "type": "hasMany",
+      "model": "subscription",
+      "foreignKey": "subscriberId"
+    },
+    "auths": {
+      "type": "hasMany",
+      "model": "auth",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,41 @@
+{
+  "name": "subscription",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "mode": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "object",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "default": "active"
+    },
+    "unsubscribeId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "event": {
+      "type": "belongsTo",
+      "model": "event",
+      "foreignKey": "eventId"
+    },
+    "client": {
+      "type": "belongsTo",
+      "model": "client",
+      "foreignKey": "subscriberId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

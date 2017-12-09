@@ -1,0 +1,33 @@
+{
+  "name": "notification",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "time": {
+      "type": "date",
+      "required": true
+    },
+    "mode": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "subscriptions": {
+      "type": "hasMany",
+      "model": "subscription",
+      "foreignKey": ""
+    },
+    "event": {
+      "type": "belongsTo",
+      "model": "event",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

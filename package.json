@@ -1,0 +1,63 @@
+{
+  "name": "v2land-api",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node .",
+    "posttest": "npm run lint && nsp check"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.143.0",
+    "axios": "^0.17.0",
+    "bcrypt": "^1.0.3",
+    "compression": "^1.0.3",
+    "cookie": "^0.3.1",
+    "cookie-session": "^2.0.0-beta.3",
+    "cors": "^2.5.2",
+    "helmet": "^1.3.0",
+    "loopback": "^3.0.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^5.0.0",
+    "loopback-component-storage": "^3.3.1",
+    "loopback-connector-mongodb": "^1.18.1",
+    "loopback-connector-mysql": "^2.4.1",
+    "loopback-connector-postgresql": "^2.8.0",
+    "nodemailer-express-handlebars": "^2.0.0",
+    "oauth": "^0.9.15",
+    "postman-url-encoder": "^1.0.1",
+    "punycode": "^2.1.0",
+    "query-string": "^5.0.1",
+    "serve-favicon": "^2.0.1",
+    "step": "^1.0.0",
+    "string-hash": "^1.1.3",
+    "strong-error-handler": "^2.0.0",
+    "superagent": "^3.8.0",
+    "time": "^0.12.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.1.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-loopback": "^8.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-watch": "^4.3.11",
+    "nsp": "^2.1.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "v2land-api"
+}
